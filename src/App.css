@@ -1,0 +1,261 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: 'Open sans', sans-serif;
+}
+
+#root {
+  overflow: hidden;
+  min-height: 105vh;
+}
+
+/* form resets */
+fieldset {
+  border: 0;
+}
+
+input, label, select, button, textarea {
+  margin: 0;
+  border: 0;
+  padding: 0;
+  display: inline-block;
+  vertical-align: middle;
+  white-space: normal;
+  background: none;
+}
+
+input:focus {
+  outline: 0;
+}
+
+input, textarea {
+  -webkit-box-sizing: content-box;
+  -moz-box-sizing: content-box;
+  box-sizing: content-box;
+}
+
+button, input[type=reset], input[type=button], input[type=submit], input[type=checkbox], input[type=radio], select {
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+}
+
+input[type=checkbox], input[type=radio] {
+  width: 13px;
+  height: 13px;
+}
+
+input[type=search] {
+  -webkit-appearance: textfield;
+  -webkit-box-sizing: content-box;
+}
+
+::-webkit-search-decoration {
+  display: none;
+}
+
+button, input[type="reset"], input[type="button"], input[type="submit"] {
+  overflow: visible;
+  width: auto;
+}
+
+::-webkit-file-upload-button {
+  padding: 0;
+  border: 0;
+  background: none;
+}
+
+textarea {
+  vertical-align: top;
+  overflow: auto;
+}
+
+select[multiple] {
+  vertical-align: top;
+}
+
+.formRowElem {
+  width: 100%;
+  float: left;
+  margin-bottom: 1em;
+}
+
+.formContainer {
+  max-width: 400px;
+  margin: 0 auto;
+  box-sizing: border-box;
+  padding: 3em;
+  text-align: left;
+}
+.formContainer legend {
+  line-height: 1.8;
+  padding: 1em 0;
+}
+.formContainer label {
+  width: 100%;
+  background: #ffffff;
+  position: relative;
+  overflow: hidden;
+  z-index: 2;
+  padding: 1px 0;
+}
+.formContainer input[type='text'] {
+  width: 100%;
+  height: 38px;
+  padding: 6px 10px;
+  line-height: 1.3;
+  background-color: #fff;
+  border: 1px solid #D1D1D1;
+  border-radius: 4px;
+  box-shadow: none;
+  box-sizing: border-box;
+}
+.formContainer button[type='submit'] {
+  background: #f2f2f2;
+}
+
+button, .button {
+  display: inline-block;
+  height: 38px;
+  padding: 0 30px;
+  color: #555;
+  text-align: center;
+  font-size: 14px;
+  font-weight: 600;
+  line-height: 38px;
+  letter-spacing: .1rem;
+  text-transform: uppercase;
+  text-decoration: none;
+  white-space: nowrap;
+  background-color: white;
+  border-radius: 4px;
+  border: 1px solid #bbb;
+  cursor: pointer;
+  box-sizing: border-box;
+}
+
+.displayError {
+  color: red;
+  text-transform: uppercase;
+  font-size: 10px;
+  letter-spacing: 1px;
+  padding: 1em 0;
+  position: relative;
+  z-index: 1;
+}
+
+.formSubmitSuccess {
+  min-height: 480px;
+  height: 100vh;
+  position: relative;
+  background: orange;
+  color: white;
+  text-align: center;
+}
+.formSubmitSuccess .close {
+  position: absolute;
+  top: 0.3em;
+  right: 0.3em;
+  padding: 0.2em 0.4em;
+  font-size: 3.6em;
+  cursor: pointer;
+  border: 1px solid white;
+  border-radius: 5px;
+  background: chocolate;
+}
+.formSubmitSuccess h2 {
+  max-width: 80%;
+  line-height: 1.3;
+  margin: 0 auto;
+  font-size: 1em;
+  font-wight: 100;
+  position: relative;
+  top: 50%;
+  transform: translateY(-50%);
+}
+.formSubmitSuccess h2 span {
+  font-size: 1.3em;
+  line-height: 1.6;
+}
+
+.transition-enter {
+  opacity: 0.01;
+}
+
+.transition-enter.transition-enter-active {
+  opacity: 1;
+  transition: opacity 0.3s ease;
+}
+
+.transition-leave {
+  opacity: 1;
+}
+
+.transition-leave.transition-leave-active {
+  opacity: 0.01;
+  transition: opacity .3s ease-in;
+}
+
+.transition-appear {
+  opacity: 0.01;
+  transition: opacity .3s ease-in;
+}
+
+.transition-appear.transition-appear-active {
+  opacity: 1;
+}
+
+.showLastEntry {
+  position: fixed;
+  width: 100%;
+  padding-top: 2em;
+  padding-bottom: 0.3em;
+  bottom: 0;
+  left: 0;
+  text-align: center;
+  background: #eee;
+  z-index: 5;
+}
+
+.delete {
+  background: #fe9090;
+  color: white;
+}
+
+.lastEntry {
+  width: 100%;
+  float: left;
+  position: relative;
+  height: 100vh;
+  background: #ffffff;
+  z-index: 1;
+}
+.lastEntry h2 {
+  text-transform: uppercase;
+  letter-spacing: 2px;
+}
+.lastEntry p {
+  width: 100%;
+  float: left;
+  margin-bottom: 1.6em;
+}
+.lastEntry label {
+  padding-right: 6px;
+  font-size: 14px;
+}
+.lastEntry span {
+  font-size: 14px;
+  font-style: italic;
+}
+
+.lastEntryContainer {
+  max-width: 400px;
+  margin: 0 auto;
+  overflow: hidden;
+  padding: 4.6em 0 3em 3em;
+  box-sizing: border-box;
+  position: relative;
+}
